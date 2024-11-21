@@ -1,65 +1,72 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Libro from '../components/Libro.astro';
+import Layout from "../layouts/Layout.astro";
+import Libro from "../components/Libro.astro";
 ---
 
 <Layout title="Minecraft Libros | LibreriaAstro">
-	<main>
-		<h1 class="text-2xl font-bold text-center mt-1 mb-5">Libros sobre Minecraft</h1>
-		<ul role="list" class="link-card-grid">
-		<Libro
-				href="https://amzn.eu/d/jjOJ6Bh"
-				title="Manual de redstone"
-				body="Lleva tu creatividad y tu capacidad de fabricación a un nivel más alto con el Manual de redstone de Minecraft."
-				src="https://m.media-amazon.com/images/I/81X2vTbaN0L._SY466_.jpg"
-		/>
-		<Libro
-				href="https://amzn.eu/d/eaAZD2u"
-				title="Manual creativo de Minecraft"
-				body="Da rienda suelta a tu imaginación y a tu inventiva con el Manual creativo oficial de Minecraft."
-				src="https://m.media-amazon.com/images/I/81UzNKgzxBL._SY466_.jpg"
-		/>
-		<Libro
-				href="https://amzn.eu/d/bj1M3Mn"
-				title="Manual de supervivencia"
-				body="Hay muchas formas de jugar a Minecraft, y una de las más populares es el modo Supervivencia."
-				src="https://m.media-amazon.com/images/I/81UxNK5BnHL._SY466_.jpg"
-		/>
-		<Libro
-				href="https://amzn.eu/d/avLTO1G"
-				title="Manual de explorador"
-				body="Responde a la llamada de la aventura y prepárate para la acción con el Manual del explorador de Minecraft."
-				src="https://m.media-amazon.com/images/I/7191Fj89XiL._SY466_.jpg"
-		/>
-		<Libro
-			href="https://amzn.eu/d/hHFRYWk"
-			title="Manual de combate"
-			body="Ponte la armadura, afila la espada y métete de cabeza en el Manual de Combate oficial de Minecraft."
-			src="https://m.media-amazon.com/images/I/81BLpiEjEyL._SY466_.jpg"
-		/>
-		<Libro
-			href="https://amzn.eu/d/fYbONBK"
-			title="Miniconstrucciones - 20 Divertidos Proyectos"
-			body="Aprende a diseñar, construir y personalizar 20 miniproyectos en Minecraft."
-			src="https://m.media-amazon.com/images/I/81qxeOJ3wUL._SY466_.jpg"
-		/>
-		</ul>
-	</main>
+  <main>
+    <h1 class="text-3xl font-bold text-center mt-1 mb-5">
+      Libros sobre Minecraft
+    </h1>
+    <ul class="link-card-grid mt-1">
+      <Libro
+        href="https://amzn.eu/d/jjOJ6Bh"
+        title="Manual de redstone"
+        body="Lleva tu creatividad y tu capacidad de fabricación a un nivel más alto con el Manual de redstone de Minecraft."
+        src="https://m.media-amazon.com/images/I/81X2vTbaN0L._SY466_.jpg"
+      />
+      <Libro
+        href="https://amzn.eu/d/eaAZD2u"
+        title="Manual creativo de Minecraft"
+        body="Da rienda suelta a tu imaginación y a tu inventiva con el Manual creativo oficial de Minecraft."
+        src="https://m.media-amazon.com/images/I/81UzNKgzxBL._SY466_.jpg"
+      />
+      <Libro
+        href="https://amzn.eu/d/bj1M3Mn"
+        title="Manual de supervivencia"
+        body="Hay muchas formas de jugar a Minecraft, y una de las más populares es el modo Supervivencia."
+        src="https://m.media-amazon.com/images/I/81UxNK5BnHL._SY466_.jpg"
+      />
+      <Libro
+        href="https://amzn.eu/d/avLTO1G"
+        title="Manual de explorador"
+        body="Responde a la llamada de la aventura y prepárate para la acción con el Manual del explorador de Minecraft."
+        src="https://m.media-amazon.com/images/I/7191Fj89XiL._SY466_.jpg"
+      />
+      <Libro
+        href="https://amzn.eu/d/hHFRYWk"
+        title="Manual de combate"
+        body="Ponte la armadura, afila la espada y métete de cabeza en el Manual de Combate oficial de Minecraft."
+        src="https://m.media-amazon.com/images/I/81BLpiEjEyL._SY466_.jpg"
+      />
+      <Libro
+        href="https://amzn.eu/d/fYbONBK"
+        title="Miniconstrucciones - 20 Divertidos Proyectos"
+        body="Aprende a diseñar, construir y personalizar 20 miniproyectos en Minecraft."
+        src="https://m.media-amazon.com/images/I/81qxeOJ3wUL._SY466_.jpg"
+      />
+    </ul>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		line-height: 1.6;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  html {
+    background-image: url(https://external-preview.redd.it/DOtHVe4vSBCNuvljQeSW163LNsOMFydpNdZoBwfW1mo.png?auto=webp&s=e20c094dba613415866db45c32faf4c51567975c);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 40%;
+    max-width: calc(100% - 2rem);
+    color: white;
+    line-height: 1.6;
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
 </style>
