@@ -1,60 +1,56 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Libro from '../components/Libro.astro';
+import Layout from "../layouts/Layout.astro";
+import Categoria from "../components/Categoria.astro";
 ---
 
 <Layout title="Inicio | LibreriaAstro">
-	<main>
-		<h1>Bienvenido a LibreriaAstro</h1>
-		<ul role="list" class="link-card-grid">
-			<Libro
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-				src="https://images.vexels.com/content/271649/preview/open-book-cartoon-icon-70db2e.png"
-			/>
-			<Libro
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-				src="https://images.vexels.com/content/271649/preview/open-book-cartoon-icon-70db2e.png"
-			/>
-			<Libro
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-				src="https://images.vexels.com/content/271649/preview/open-book-cartoon-icon-70db2e.png"
-			/>
-			<Libro
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-				src="https://images.vexels.com/content/271649/preview/open-book-cartoon-icon-70db2e.png"
-			/>
-		</ul>
-	</main>
+  <main>
+    <div id="introduccion-inicio">
+      <div class="flex justify-center text-center">
+        <img src="favicon.svg" class="h-16" alt="LibreriaAstro Logo" />
+        <h1 class="ml-4">LibreriaAstro</h1>
+      </div>
+      <ul role="list" class="link-card-grid">
+        <Categoria
+          clase="bg-minecraft"
+          href="/minecraft"
+          title="Libros sobre Minecraft"
+          body="Una colección sobre libros de Minecraft."
+        />
+        <Categoria
+          clase="bg-proximamente"
+          href="#"
+          title="Proximamente"
+          body="Una categoria proximamente."
+        />
+      </ul>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		line-height: 1.6;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  #introduccion-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh;
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+  }
 </style>
