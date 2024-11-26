@@ -36,9 +36,8 @@ import Categoria from "../components/Categoria.astro";
     color: white;
   }
   h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1;
+    font-size: 2rem;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -46,11 +45,26 @@ import Categoria from "../components/Categoria.astro";
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 90vh;
+    min-height: 80vh;
   }
   .link-card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(minmax(100px, 1fr));
     gap: 1rem;
+  }
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    #introduccion-inicio {
+      min-height: 90vh;
+    }
+    .link-card-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
   }
 </style>
