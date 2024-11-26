@@ -58,9 +58,7 @@ const isActive = (href: string) => {
                   <a
                     href={link.href}
                     class={`block py-2 px-3 rounded md:p-0 md:bg-transparent ${
-                      isActive(link.href)
-                        ? "bg-blue-700 md:text-blue-500"
-                        : ""
+                      isActive(link.href) ? "bg-blue-700 md:text-blue-500" : ""
                     }`}
                     aria-current={isActive(link.href) ? "page" : undefined}
                   >
@@ -90,8 +88,16 @@ const isActive = (href: string) => {
       font-family: system-ui, sans-serif;
       background: #13151a;
     }
+    main {
+      margin: auto;
+      padding: 0.5rem;
+      width: 80%;
+      max-width: calc(100% - 2rem);
+      color: white;
+      line-height: 1.6;
+    }
     nav {
-      background-color: #111827
+      background-color: #111827;
     }
     p {
       font-size: 14px;

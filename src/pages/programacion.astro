@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Libro from "../components/Libro.astro";
+---
+
+<Layout title="Programación Libros | LibreriaAstro">
+  <main>
+    <h1 class="text-3xl font-bold text-center mt-1 mb-5">
+      Libros sobre Programación
+    </h1>
+    <ul class="link-card-grid mt-1">
+      <Libro
+        href="https://amzn.eu/d/jjOJ6Bh"
+        title="Git y GitHub desde cero"
+        autor="de Brais Moure"
+        body="Aprender a trabajar con Git y GitHub es una habilidad esencial para cualquier persona dedicada al desarrollo de software."
+        src="https://m.media-amazon.com/images/I/61o+DINUL6L._SY466_.jpg"
+      />
+      <Libro
+        href="https://amzn.eu/d/gLmm9Vc"
+        title="Aprendiendo React: Guía práctica"
+        autor="de Carlos Azaustre"
+        body="¿Eres un desarrollador con conocimientos en JavaScript que busca adentrarse en el mundo de React.js?"
+        src="https://m.media-amazon.com/images/I/61d2i7cnPpL._SY466_.jpg"
+      />
+      <Libro
+        href="https://amzn.eu/d/fnCz27M"
+        title="Ultimate Python: de cero a experto"
+        autor="de Nicolas Schurmann"
+        body="Aprender a programar es una herramienta necesaria el día de hoy, ya sea para poder construir aplicaciones web hasta crear la más avanzada inteligencia artificial."
+        src="https://m.media-amazon.com/images/I/61c7XofgsYL._SY342_.jpg"
+      />
+      <Libro
+        href="https://amzn.eu/d/fsiNwdQ"
+        title="Aprender a programar con C#"
+        autor="de Héctor De León Guevara"
+        body="Aprender a programar es fundamental hoy en día, pero el lenguaje de programación C# es un lenguaje que se presta para el aprendizaje"
+        src="https://m.media-amazon.com/images/I/41dVA-qmeuL._SY445_SX342_.jpg"
+      />
+      <Libro
+        href="https://amzn.eu/d/fTeCixH"
+        title="Ultimate Docker"
+        autor="de Nicolas Schurmann"
+        body="Todo lo que necesitas para dominar Docker en un claro, conciso y práctico libro."
+        src="https://m.media-amazon.com/images/I/61gL6H39xtL._SY466_.jpg"
+      />
+      <Libro
+        href="https://amzn.eu/d/0Tg47pt"
+        title="Lenguaje de programación Rust"
+        autor="de Carol Nichols y Steve Klabnik"
+        body="Descubra el mundo de Rust, el revolucionario lenguaje de programación de sistemas de código abierto."
+        src="https://m.media-amazon.com/images/I/61Da+y0ylsL._SY466_.jpg"
+      />
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  html {
+    background-image: url(/fondos/programacion.webp);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .link-card-grid {
+    display: grid;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+  }
+  @media (min-width: 640px) {
+    .link-card-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      width: 50%;
+    }
+  }
+</style>
