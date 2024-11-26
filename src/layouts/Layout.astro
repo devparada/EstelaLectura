@@ -27,7 +27,7 @@ const isActive = (href: string) => {
     <title>{title}</title>
   </head>
   <body>
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <nav>
       <div
         class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
@@ -50,7 +50,7 @@ const isActive = (href: string) => {
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-900"
           >
             {
               navLinks.map((link) => (
@@ -59,7 +59,7 @@ const isActive = (href: string) => {
                     href={link.href}
                     class={`block py-2 px-3 rounded md:p-0 md:bg-transparent ${
                       isActive(link.href)
-                        ? "bg-blue-700 md:text-blue-700 md:dark:text-blue-500"
+                        ? "bg-blue-700 md:text-blue-500"
                         : ""
                     }`}
                     aria-current={isActive(link.href) ? "page" : undefined}
@@ -89,6 +89,9 @@ const isActive = (href: string) => {
     html {
       font-family: system-ui, sans-serif;
       background: #13151a;
+    }
+    nav {
+      background-color: #111827
     }
   </style>
 
