@@ -6,22 +6,25 @@ import Categoria from "../components/Categoria.astro";
 <Layout title="Inicio | LibreriaAstro">
   <main>
     <div id="introduccion-inicio">
-      <div class="flex justify-center text-center">
+      <div class="flex justify-center text-center items-center">
         <img src="favicon.svg" class="h-16" alt="LibreriaAstro Logo" />
-        <h1 class="ml-4">LibreriaAstro</h1>
+        <div class="ml-4">
+          <h1 class="mb-1">LibreriaAstro</h1>
+          <p class="mb-4 text-center">Sitio web de una librería hecha en Astro</p>
+        </div>
       </div>
       <ul role="list" class="link-card-grid">
         <Categoria
           clase="bg-minecraft"
           href="/minecraft"
           title="Libros sobre Minecraft"
-          body="Una colección sobre libros de Minecraft."
+          body="Explora guías y manuales sobre Minecraft y sus secretos."
         />
         <Categoria
-          clase="bg-proximamente"
-          href="#"
-          title="Proximamente"
-          body="Una categoria proximamente."
+        clase="bg-programacion"
+        href="/programacion"
+        title="Programación"
+        body="Explora y aprende sobre programación con estos libros"
         />
       </ul>
     </div>
@@ -39,7 +42,6 @@ import Categoria from "../components/Categoria.astro";
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 2rem;
   }
   #introduccion-inicio {
     display: flex;
@@ -49,8 +51,8 @@ import Categoria from "../components/Categoria.astro";
   }
   .link-card-grid {
     display: grid;
-    grid-template-columns: repeat(minmax(100px, 1fr));
-    gap: 1rem;
+    grid-template-columns: minmax(100px, 1fr);
+    gap: 1.5rem;
   }
   @media (min-width: 640px) {
     h1 {
@@ -58,7 +60,7 @@ import Categoria from "../components/Categoria.astro";
       font-weight: 700;
       line-height: 1;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
     #introduccion-inicio {
       min-height: 90vh;
