@@ -3,9 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Libro from "../components/Libro.astro";
 ---
 
-<Layout title="Minecraft Libros | LibreriaAstro">
+<Layout title="Minecraft Libros | EstelaLectura">
   <main>
-    <h1 class="text-3xl font-bold text-center mt-1 mb-5">
+    <h1 class="text-3xl font-bold text-center mt-3 mb-6">
       Libros sobre Minecraft
     </h1>
     <ul class="link-card-grid mt-1">
@@ -62,17 +62,47 @@ import Libro from "../components/Libro.astro";
     background-size: cover;
   }
   .link-card-grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     margin: auto;
-    width: 100%;
     justify-content: center;
     gap: 1rem;
     padding: 0;
   }
   @media (min-width: 640px) {
     .link-card-grid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      width: 60%;
+    }
+  }
+  @media (min-width: 980px) {
+    .link-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      width: 70%;
+    }
+  }
+  @media (min-width: 1024px) {
+    .link-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      width: 40%;
+    }
+  }
+  @media (min-width: 1132px) {
+    .link-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       width: 50%;
+    }
+  }
+  @media (min-width: 1200px) {
+    .link-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      width: 40%;
     }
   }
 </style>

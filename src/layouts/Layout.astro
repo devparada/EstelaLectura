@@ -4,7 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
-
+import { Image } from "astro:assets";
 import { navLinks } from "../data/links.js";
 
 const isActive = (href: string) => {
@@ -20,10 +20,10 @@ const isActive = (href: string) => {
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Sitio web de una librería hecha en Astro"
+      content="Una librería donde se muestran libros de diversos temas"
     />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="logo.png" />
     <title>{title}</title>
   </head>
   <body>
@@ -32,10 +32,16 @@ const isActive = (href: string) => {
         class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="favicon.svg" class="h-8" alt="LibreriaAstro Logo" />
+          <Image
+            src="/logo.png"
+            alt="EstelaLectura Logo"
+            width="32"
+            height="32"
+            loading="eager"
+          />
           <span
-            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-            >LibreriaAstro</span
+            class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+            >EstelaLectura</span
           >
         </a>
         <button
@@ -46,7 +52,13 @@ const isActive = (href: string) => {
           aria-expanded="false"
         >
           <span class="sr-only">Abrir menu principal</span>
-          <img src="favicon.svg" alt="LibreriaAstro Logo" />
+          <Image
+            src="/logo.png"
+            alt="EstelaLectura Logo"
+            width="32"
+            height="32"
+            loading="eager"
+          />
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul
@@ -91,7 +103,6 @@ const isActive = (href: string) => {
     main {
       margin: auto;
       padding: 0.5rem;
-      width: 80%;
       max-width: calc(100% - 2rem);
       color: white;
       line-height: 1.6;

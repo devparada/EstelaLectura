@@ -1,16 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Categoria from "../components/Categoria.astro";
+import { Image } from "astro:assets";
 ---
 
-<Layout title="Inicio | LibreriaAstro">
+<Layout title="Inicio | EstelaLectura">
   <main>
     <div id="introduccion-inicio">
       <div class="flex justify-center text-center items-center">
-        <img src="favicon.svg" class="h-16" alt="LibreriaAstro Logo" />
+        <Image
+        src="/logo.png"
+        alt="EstelaLectura Logo"
+        width="80"
+        height="80"
+        loading="eager"
+      />
         <div class="ml-4">
-          <h1 class="mb-1">LibreriaAstro</h1>
-          <p class="mb-4 text-center">Sitio web de una librería hecha en Astro</p>
+          <h1 class="mb-1">EstelaLectura</h1>
+          <p class="mb-5 text-center">Una librería donde se muestran libros de diversos temas</p>
         </div>
       </div>
       <ul role="list" class="link-card-grid">
