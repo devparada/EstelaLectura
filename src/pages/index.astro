@@ -9,15 +9,17 @@ import { Image } from "astro:assets";
     <div id="introduccion-inicio">
       <div class="flex justify-center text-center items-center">
         <Image
-        src="/logo.png"
-        alt="EstelaLectura Logo"
-        width="80"
-        height="80"
-        loading="eager"
-      />
+          src="/logo.png"
+          alt="EstelaLectura Logo"
+          width="80"
+          height="80"
+          loading="eager"
+        />
         <div class="ml-4">
           <h1 class="mb-1">EstelaLectura</h1>
-          <p class="mb-5 text-center">Una librería donde se muestran libros de diversos temas</p>
+          <p class="mb-5 text-center">
+            Una librería donde se muestran libros de diversos temas
+          </p>
         </div>
       </div>
       <ul role="list" class="link-card-grid">
@@ -28,10 +30,10 @@ import { Image } from "astro:assets";
           body="Explora guías y manuales sobre Minecraft y sus secretos."
         />
         <Categoria
-        clase="bg-programacion"
-        href="/programacion"
-        title="Programación"
-        body="Explora y aprende sobre programación con estos libros"
+          clase="bg-programacion"
+          href="/programacion"
+          title="Programación"
+          body="Explora y aprende sobre programación con estos libros"
         />
       </ul>
     </div>
@@ -49,6 +51,9 @@ import { Image } from "astro:assets";
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+  }
+  #intro-inicio {
+    flex-direction: column;
   }
   #introduccion-inicio {
     display: flex;
@@ -68,6 +73,9 @@ import { Image } from "astro:assets";
       line-height: 1;
       text-align: center;
       margin-bottom: 1rem;
+    }
+    #intro-inicio {
+      flex-direction: row;
     }
     #introduccion-inicio {
       min-height: 90vh;
