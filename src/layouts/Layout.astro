@@ -24,6 +24,10 @@ const isActive = (href: string) => {
     />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="logo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
     <title>{title}</title>
   </head>
   <body>
@@ -68,7 +72,7 @@ const isActive = (href: string) => {
               navLinks.map((link) => (
                 <li>
                   <a
-                    href={link.href}
+                    href={isActive(link.href) ? `${link.href}#` : link.href}
                     class={`block py-2 px-3 rounded md:p-0 md:bg-transparent ${
                       isActive(link.href) ? "bg-blue-700 md:text-blue-500" : ""
                     }`}
