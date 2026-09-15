@@ -20,15 +20,18 @@ import { Image } from "astro:assets";
         width="80"
         height="80"
         loading="eager"
-        class="mx-auto"
+        class="w-full"
       />
-      <h2 class="mt-2 text-center">{title}</h2>
-      <p class="mt-1 text-center">{autor}</p>
-      <p class="mt-2 text-center">{body}</p>
+      <div class="text-left w-full mt-2! mb-1!">
+        <h2>{title}</h2>
+        <p>{autor}</p>
+      </div>
+      <p class="mt-2 text-left">{body}</p>
     </a>
-    <div class="text-center" id="leido">
-      <input type="checkbox" id=`leido${title.slice(0,12).replace(/ /g, "")}` />
-      <label for=`leido${title.slice(0,12).replace(/ /g, "")}`>Leido</label>
+    <div class="text-center mb-2.5!">
+      <button class="bg-blue-600 rounded-2xl py-1.5! cursor-pointer w-full"
+        >Marcar como leído</button
+      >
     </div>
   </div>
 </li>
@@ -49,18 +52,16 @@ import { Image } from "astro:assets";
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   }
   .link-card div {
-    margin-top: 2px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .link-card div a {
-    padding: calc(0.5rem - 1px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
   .link-card:is(:hover) h2 {
     color: var(--accent-light);
-  }
-  #leido {
-    margin-top: -10px;
   }
 </style>

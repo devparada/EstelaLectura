@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import { navLinks } from "../data/links.js";
+
+const isActive = (href: string) =>
+  Astro.url.pathname === href || Astro.url.pathname === `${href}/`;
+---
+
+<nav class="text-white bg-[#0a1424] max-w-full">
+  <div class="px-6 h-16 flex items-center justify-between  max-w-full">
+    
+    <a href="/" class="flex items-center gap-2">
+      <Image src="/logo.png" alt="Logo" width={32} height={32} />
+      <span class="text-xl font-bold">EstelaLectura</span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-6">
+      {navLinks.map((link, index) => {
+        const isLast = index === navLinks.length - 1;
+        return (
+          <a
+            href={link.href}
+            class={`hover:text-white ${
+              isLast 
+                ? "text-cyan-600 font-bold px-4 py-1.5 rounded-full" 
+                : isActive(link.href) ? "text-cyan-600 font-semibold" : "text-gray-300"
+            }`}
+          >
+            {link.name}
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</nav>
